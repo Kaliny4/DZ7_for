@@ -8,11 +8,14 @@
 
 n = input('Ввести с клавиатуры целое число n: ')
 n1 = int(n) if n.isdigit() else 0
-
+res = sum(i ** 3 for i in range(1, n1 + 1) if i % 3 != 0)
+# або ось так
+"""
 res = 0
 for item in range(1, n1 + 1):
     if item % 3 != 0:
         res += item ** 3
         print('Res on each step: ', res, ', ', end='')
 print()
+"""
 print('Final sum: ', res)
